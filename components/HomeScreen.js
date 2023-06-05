@@ -3,7 +3,6 @@ import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import { PieChart } from 'react-native-chart-kit';
 
-
 const API_URL = 'https://plain-teal-bull.cyclic.app/professeurs';
 
 const HomeScreen = () => {
