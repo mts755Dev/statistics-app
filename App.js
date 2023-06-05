@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './components/HomeScreen';
 import AboutUsScreen from './components/AboutUsScreen';
 import { Ionicons } from '@expo/vector-icons';
+import RegisterScreen from './components/RegisterScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,22 +16,26 @@ const App = () => {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === 'Home') {
+            if (route.name === 'Accueil') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'About Us') {
+            } else if (route.name === 'A propos') {
               iconName = focused ? 'information-circle' : 'information-circle-outline';
+            } else if (route.name === 'Inscription') {
+              iconName = focused ? 'person' : 'person-outline';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
           },
+          tabBarActiveTintColor: 'blue',
+          tabBarInactiveTintColor: 'gray',
+          tabBarStyle: {
+            display: 'flex',
+          },
         })}
-        tabBarOptions={{
-          activeTintColor: 'blue',
-          inactiveTintColor: 'gray',
-        }}
       >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="About Us" component={AboutUsScreen} />
+        <Tab.Screen name="Accueil" component={HomeScreen} />
+        <Tab.Screen name="A propos" component={AboutUsScreen} />
+        <Tab.Screen name="Inscription" component={RegisterScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
