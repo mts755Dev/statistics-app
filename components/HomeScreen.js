@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import { PieChart } from 'react-native-chart-kit';
 
-const API_URL = 'https://troubled-red-garb.cyclic.app/professeurs';
+const API_URL = 'https://tiny-worm-nightgown.cyclic.app/professeurs';
 
 const HomeScreen = () => {
   const [data, setData] = useState([]);
